@@ -2,13 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Site Bonito</title>
+  <title>Para meu pai 💙</title>
+
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      background: linear-gradient(135deg, #89CFF0, #d7ecff);
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -18,28 +19,28 @@
     .container {
       background: white;
       padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       text-align: center;
-      width: 300px;
+      max-width: 400px;
     }
 
     h1 {
-      color: #333;
-      margin-bottom: 20px;
+      color: #2c3e50;
+      margin-bottom: 15px;
     }
 
     p {
-      color: #666;
-      font-size: 14px;
+      color: #555;
+      font-size: 15px;
       margin-bottom: 20px;
     }
 
     button {
       padding: 12px 20px;
       border: none;
-      border-radius: 8px;
-      background-color: #4CAF50;
+      border-radius: 10px;
+      background-color: #3498db;
       color: white;
       font-size: 16px;
       cursor: pointer;
@@ -47,23 +48,62 @@
     }
 
     button:hover {
-      background-color: #45a049;
+      background-color: #2980b9;
       transform: scale(1.05);
+    }
+
+    #carta {
+      margin-top: 20px;
+      font-size: 15px;
+      color: #333;
+      display: none;
+      animation: aparecer 0.5s ease;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
-    <h1>Bem-vinda 👋</h1>
-    <p>Esse é seu site melhorado! Simples, bonito e moderno.</p>
-    <button onclick="clicou()">Clique aqui</button>
+    <h1>Eu te amo, pai 💙</h1>
+    <p>Para o melhor pai do mundo: <b>Willian Moises</b></p>
+
+    <button id="botao">Abrir cartinha 💌</button>
+
+    <div id="carta">
+      <p>
+        Pai, eu só queria te lembrar o quanto você é importante pra mim.<br><br>
+        Obrigada por tudo que você faz, por cuidar de mim, me apoiar e nunca desistir de mim.<br><br>
+        Você é uma das pessoas mais fortes e incríveis que eu conheço.<br><br>
+        Eu tenho muito orgulho de ser sua filha 💙<br><br>
+        Te amo pra sempre!
+      </p>
+    </div>
   </div>
 
   <script>
-    function clicou() {
-      alert("Você clicou no botão 😄");
-    }
+    document.getElementById("botao").addEventListener("click", () => {
+      const carta = document.getElementById("carta");
+
+      carta.style.display = "block";
+
+      // efeito extra
+      carta.style.transform = "scale(1.05)";
+      setTimeout(() => {
+        carta.style.transform = "scale(1)";
+      }, 300);
+    });
   </script>
 
 </body>
