@@ -2,18 +2,69 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Site</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Meu Site Bonito</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Meu primeiro site Emily </h1>
-  <p>Olá! Esse é meu site.</p>
+  <div class="container">
+    <h1>Bem-vinda 👋</h1>
+    <p>Esse é seu site melhorado! Simples, bonito e moderno.</p>
+    <button onclick="clicou()">Clique aqui</button>
+  </div>
 
-  <button onclick="clicou()">Clique aqui</button>
+  <script>
+    function clicou() {
+      alert("Você clicou no botão 😄");
+    }
+  </script>
 
-  <p id="mensagem"></p>
-
-  <script src="script.js"></script>
 </body>
 </html>
